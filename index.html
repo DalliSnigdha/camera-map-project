@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Google Maps JS -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE"></script> 
+  <script>
+  const apiKey = "%GOOGLE_MAPS_KEY%";
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
+  document.head.appendChild(script);
+  </script>
+ 
 
   <!-- CSV Parser -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
@@ -67,5 +73,6 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
 
